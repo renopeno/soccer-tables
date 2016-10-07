@@ -1,24 +1,28 @@
-.App {
-  text-align: center;
+.App-wrapper {
+  min-height: 100vh;
+  max-width: 1024px;
+  background: linear-gradient(#a3554f,#48194a);
+  margin: 0 auto;
+  padding-top: 50px;
+  overflow-y: hidden;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+/*
+  Table
+*/
+.Table {
+  max-width: 300px;
+  min-height: 450px;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 5px;
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
 }
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.Table--header {
+  position: absolute;
+  top: 50px;
+  background: blue;
+  height: 50px;
+  width: 100%;
+  color: #000;
 }
