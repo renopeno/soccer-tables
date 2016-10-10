@@ -1,28 +1,53 @@
 .App-wrapper {
-  min-height: 100vh;
-  max-width: 1024px;
-  background: linear-gradient(#a3554f,#48194a);
+  min-height: 150vh;
+  min-width: 1024px;
+  background: linear-gradient(to top, #a2f7b5,#239989);
   margin: 0 auto;
-  padding-top: 50px;
-  overflow-y: hidden;
+  padding: 50px;
 }
 
 /*
   Table
 */
 .Table {
-  max-width: 300px;
-  min-height: 450px;
-  background: #fff;
-  margin: 0 auto;
+  width: 620px;
+  background: #fafafa;
+  padding: 10px;
+  margin: 50px auto;
   border-radius: 5px;
 
 }
 .Table--header {
-  position: absolute;
-  top: 50px;
-  background: blue;
-  height: 50px;
-  width: 100%;
-  color: #000;
+  text-align: center;
+  padding-top: .75em;
+  margin-bottom: .75em;
+  color: #239989;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+.Table--standings-label {
+  background: #eee;
+}
+.Table--standings-label:nth-child(odd) {
+  background: #fafafa;
+}
+.Cell {
+  display: inline-block;
+  padding: .35em;
+}
+.Cell-position {
+  text-align: center;
+  width: 10%;
+}
+.Cell-club {
+  width: 50%;
+}
+.Cell-stats {
+  text-align: left;
+  width: 40%;
+}
+.Cell-stats-icon {
+  text-align: center;
+  display: inline-block;
+  width: 25%;
 }
