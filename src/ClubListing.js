@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 
 
 class ClubListing extends Component {
+
   render (){
     return (
         <div className="Table--standings-label">
