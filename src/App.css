@@ -1,7 +1,7 @@
 .App-wrapper {
-  min-height: 150vh;
+  min-height: 100vh;
   min-width: 1024px;
-  background: linear-gradient(to top, #a2f7b5,#239989);
+  background: linear-gradient(45deg, #a18bf9,#239989);
   margin: 0 auto;
   padding: 50px;
 }
@@ -15,7 +15,7 @@
   padding: 10px;
   margin: 50px auto;
   border-radius: 5px;
-
+  box-shadow: 0 0 30px rgba(0,0,0,.2);
 }
 .Table--header {
   text-align: center;
@@ -27,6 +27,11 @@
 }
 .Table--standings-label {
   background: #eee;
+}
+.Table--standings-header {
+  font-weight: bold;
+  color: #239989;
+
 }
 .Table--standings-label:nth-child(odd) {
   background: #fafafa;
@@ -41,6 +46,11 @@
 }
 .Cell-club {
   width: 50%;
+}
+.Cell-club img {
+  height: 18px;
+  width: 18px;
+  margin-right: 12px;
 }
 .Cell-stats {
   text-align: left;

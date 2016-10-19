@@ -3,17 +3,16 @@
 import React, { Component } from 'react';
 
 
-class ClubListing extends Component {
+class ClubListingHeader extends Component {
 
   render (){
     return (
-        <div className="Table--standings-label">
+        <div className="Table--standings-header">
           <div className="Cell Cell-position">
             <span>{this.props.position}</span>
           </div>
 
           <div className="Cell Cell-club">
-            <img src={this.props.crestURI} alt={this.props.club} />
             <span>{this.props.club}</span>
           </div>
           <div className="Cell Cell-stats">
@@ -27,4 +26,4 @@ class ClubListing extends Component {
   }
 }
 
-export default ClubListing;
+export default ClubListingHeader;

@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import TableHeader from './TableHeader.js';
 import ClubListing from './ClubListing.js';
+import ClubListingHeader from './ClubListingHeader.js';
 
 
 class Table extends Component {
@@ -17,7 +18,8 @@ class Table extends Component {
           "playedGames": null,
           "goals": null,
           "goalsAgainst": null,
-          "points": null
+          "points": null,
+          "crestURI": undefined
 
         ]
       }
@@ -56,27 +58,28 @@ class Table extends Component {
   render (){
 
     const stats = this.state.data;
-
     let rows = [];
 
     for (var i = 0; i < stats.standing.length; i++) {
       rows.push(
         <ClubListing
           key={i}
-          position={stats.standing[i].position} club={stats.standing[i].teamName} apps={stats.standing[i].playedGames} scored={stats.standing[i].goals} conceeded={stats.standing[i].goalsAgainst}   points={stats.standing[i].points}
+          position={stats.standing[i].position} crestURI={stats.standing[i].crestURI} club={stats.standing[i].teamName} apps={stats.standing[i].playedGames} scored={stats.standing[i].goals} conceeded={stats.standing[i].goalsAgainst}   points={stats.standing[i].points}
         />
       )
     }
 
     return (
+      <div className="App-wrapper">
+        <div className="Table">
 
-      <div className="Table">
-        <TableHeader title={stats.leagueCaption} />
-        <ClubListing position="#" club="Club" apps="A" scored="+" conceeded="-" points="Pts"/>
+          <TableHeader title={stats.leagueCaption} />
 
-        {rows}
+          <ClubListingHeader position="#" club="Club" apps="A" scored="+" conceeded="-" points="Pts"/>
 
+          {rows}
 
+        </div>
       </div>
     );
   }
