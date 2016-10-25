@@ -14,7 +14,7 @@ class Table extends Component {
         "leagueCaption": undefined,
         "standing": [
           "position": null,
-          "teamName": "",
+          "teamName": undefined,
           "playedGames": null,
           "goals": null,
           "goalsAgainst": null,
@@ -52,22 +52,16 @@ class Table extends Component {
 
   componentDidMount() {
     this.loadData();
-    console.log('componentDidMount:',this.state.data)
   }
 
   render (){
 
     const stats = this.state.data;
-    let rows = [];
-
-    for (var i = 0; i < stats.standing.length; i++) {
-      rows.push(
-        <ClubListing
-          key={i}
-          position={stats.standing[i].position} crestURI={stats.standing[i].crestURI} club={stats.standing[i].teamName} apps={stats.standing[i].playedGames} scored={stats.standing[i].goals} conceeded={stats.standing[i].goalsAgainst}   points={stats.standing[i].points}
-        />
-      )
-    }
+    let rows = stats.standing.map( (item,id) => {
+      return (
+        <ClubListing {... item}  key={id} />
+      );
+    })
 
     return (
       <div className="App-wrapper">
